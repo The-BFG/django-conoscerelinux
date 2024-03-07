@@ -1,6 +1,5 @@
 VENV=.venv
 SHELL=/bin/bash
-PROJECT=bioretics
 
 SYSPYTHON?=python3
 python=$(VENV)/bin/python3
