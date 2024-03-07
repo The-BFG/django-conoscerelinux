@@ -1,0 +1,13 @@
+[project]
+name = "django-conoscerelinux"
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "django~=5.0"
+]
+
+[project.optional-dependencies]
+dev = ["black", "isort"]
+
+[tool.isort]
+profile = "black"
