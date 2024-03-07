@@ -36,3 +36,7 @@ requirements:
 .PHONY: test
 test:
 	$(python) -m pytest -x -p no:warnings
+
+.phony: secret-key
+secret-key:
+	$(python) -c 'from django.core.management.utils import get_random_secret_key; print(f"SECRET_KEY=\"{get_random_secret_key()}\"")' > .env
