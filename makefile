@@ -25,7 +25,7 @@ venv: clean
 
 .PHONY: update
 update:
-	@echo -e $(bold)Install and update requirements \(CUDA 12\)$(sgr0)
+	@echo -e $(bold)Install and update requirements$(sgr0)
 	$(python) -m piptools sync
 
 .PHONY: requirements
