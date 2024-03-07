@@ -25,5 +25,7 @@ pathspec==0.12.1
     # via black
 platformdirs==4.2.0
     # via black
+python-decouple==3.8
+    # via django-conoscerelinux (pyproject.toml)
 sqlparse==0.4.4
     # via django
