@@ -1,9 +1,11 @@
 VENV=.venv
 SHELL=/bin/bash
+DJANGO_PROJECT=clinux
 
 SYSPYTHON?=python3
 python=$(VENV)/bin/python3
 pip=$(python) -m pip
+django=$(python) $(DJANGO_PROJECT)/manage.py
 
 # Utility scripts to prettify echo outputs
 bold := '\033[1m'
@@ -45,3 +47,7 @@ lint:
 .PHONY: secret-key
 secret-key:
 	$(python) -c 'from django.core.management.utils import get_random_secret_key; print(f"SECRET_KEY=\"{get_random_secret_key()}\"")' > .env
+
+.PHONY: migrate
+migrate:
+	$(django) migrate
