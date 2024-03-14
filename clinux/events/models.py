@@ -18,8 +18,8 @@ class EventSession(models.Model):
 
 class Event(models.Model):
     slug = models.SlugField(unique=True, max_length=100)
-    title = models.CharField(null=False, blank=False)
-    subtitle = models.CharField(default="", blank=True)
+    title = models.CharField(null=False, blank=False, max_length=100)
+    subtitle = models.CharField(default="", blank=True, max_length=100)
     description = models.TextField(default="", blank=True)
 
     # TO_DO: timestamp
