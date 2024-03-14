@@ -26,10 +26,3 @@ class Event(models.Model):
     # hours = models.CharField()
     # level = models.CharField()
     # image = models.ImageField(upload_to = user_directory_path)
-    @property
-    def start(self):
-        return min(s.start for s in self.sessions)
-
-    @property
-    def end(self):
-        return max(s.end for s in self.sessions)
