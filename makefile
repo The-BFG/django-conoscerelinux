@@ -37,6 +37,11 @@ requirements:
 test:
 	$(python) -m pytest -x -p no:warnings
 
-.phony: secret-key
+.PHONY: lint
+lint:
+	$(python) -m black $(DJANGO_PROJECT)
+	$(python) -m isort $(DJANGO_PROJECT)
+
+.PHONY: secret-key
 secret-key:
 	$(python) -c 'from django.core.management.utils import get_random_secret_key; print(f"SECRET_KEY=\"{get_random_secret_key()}\"")' > .env
