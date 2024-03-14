@@ -51,3 +51,9 @@ secret-key:
 .PHONY: migrate
 migrate:
 	$(django) migrate
+
+.PHONY: serve runserver
+serve: runserver
+runserver:
+	$(django) runserver
+	
