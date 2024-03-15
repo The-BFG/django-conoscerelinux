@@ -55,6 +55,9 @@ migrate:
 migrations:
 	$(django) makemigrations
 
+superuser:
+	$(django) createsuperuser --username admin
+
 .PHONY: serve runserver
 serve: runserver
 runserver:
