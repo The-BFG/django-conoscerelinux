@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import DetailView
 
-# Create your views here.
+from .models import Member
+
+
+class MemberDetailView(DetailView):
+    model = Member
+    context_object_name = "member"
+    template_name = "members/member.html"
