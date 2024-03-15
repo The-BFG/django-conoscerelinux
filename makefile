@@ -48,9 +48,12 @@ lint:
 secret-key:
 	$(python) -c 'from django.core.management.utils import get_random_secret_key; print(f"SECRET_KEY=\"{get_random_secret_key()}\"")' > .env
 
-.PHONY: migrate
+.PHONY: migrate migrations
 migrate:
 	$(django) migrate
+
+migrations:
+	$(django) makemigrations
 
 .PHONY: serve runserver
 serve: runserver
