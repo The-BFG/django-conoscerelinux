@@ -11,3 +11,4 @@ class EventSessionAdmin(admin.ModelAdmin):
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     list_display = ["slug", "title", "subtitle", "description"]
+    prepopulated_fields = {"slug": ("title",)}
