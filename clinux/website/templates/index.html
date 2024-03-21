@@ -1,6 +1,7 @@
-{% load static %}
-<img src="{% static 'images/logo.png' %}" alt="Conoscere Linux Logo">
+{% extends 'base.html' %}
 
+{% block content %}
 <h1> Hello {{message}}! </h1>
 
 {% include "events/event_list.html" %}
+{% endblock %}

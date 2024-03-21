@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ event.title }}</h1>
+
+<p>{{ event.subtitle }}</p>
+
+<p>{{ event.description }}</p>
+
+Appuntamenti:
+<ul>
+{% for session in event.sessions.all %}
+    <li>{{ session.start }} - {{ session.end }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
