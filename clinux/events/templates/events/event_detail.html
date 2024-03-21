@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>{{ event.title }}</h1>
 
 <p>{{ event.subtitle }}</p>
@@ -10,3 +13,4 @@ Appuntamenti:
     <li>{{ session.start }} - {{ session.end }}</li>
 {% endfor %}
 </ul>
+{% endblock %}
