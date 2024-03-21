@@ -1,0 +1,142 @@
+[
+  {
+    "model": "members.member",
+    "pk": 1,
+    "fields": {
+      "user": 3,
+      "first_name": "Bruno",
+      "last_name": "Fausto",
+      "social_id": "GTGFZF73A20L609X",
+      "gender": "M",
+      "birth_date": "1973-03-15",
+      "birth_city": "Boncellino",
+      "phone": "0345 0520836"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 2,
+    "fields": {
+      "user": 4,
+      "first_name": "Vanna",
+      "last_name": "Folliero",
+      "social_id": "FBLNTX59P69E001V",
+      "gender": "F",
+      "birth_date": "1948-04-12",
+      "birth_city": "Lavinio Lido Di Enea",
+      "phone": "0378 0186785"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 3,
+    "fields": {
+      "user": 5,
+      "first_name": "Giuditta",
+      "last_name": "Zito",
+      "social_id": "NJHHGR63H47G826B",
+      "gender": "F",
+      "birth_date": "1990-01-18",
+      "birth_city": "Carsi",
+      "phone": "0361 1580675"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 4,
+    "fields": {
+      "user": 6,
+      "first_name": "Stefania",
+      "last_name": "Conti",
+      "social_id": "GMRQZF35E46F806C",
+      "gender": "F",
+      "birth_date": "2000-11-08",
+      "birth_city": "Montegualtieri",
+      "phone": "0317 5731888"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 5,
+    "fields": {
+      "user": 7,
+      "first_name": "Basilio",
+      "last_name": "Fiorentini",
+      "social_id": "VZHNKZ71R61Z204H",
+      "gender": "M",
+      "birth_date": "1989-11-21",
+      "birth_city": "Chiuduno",
+      "phone": "0335 6007550"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 6,
+    "fields": {
+      "user": 8,
+      "first_name": "Filiberto",
+      "last_name": "Fallaci",
+      "social_id": "PNYDFG80T62D304V",
+      "gender": "M",
+      "birth_date": "1953-05-03",
+      "birth_city": "Santa Croce Del Sannio",
+      "phone": "0374 5978082"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 7,
+    "fields": {
+      "user": 9,
+      "first_name": "Savino",
+      "last_name": "Bergamaschi",
+      "social_id": "XVLSVD61S65H991J",
+      "gender": "M",
+      "birth_date": "1971-08-13",
+      "birth_city": "Caltanissetta",
+      "phone": "0392 4191383"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 8,
+    "fields": {
+      "user": 10,
+      "first_name": "Candida",
+      "last_name": "Pagnotto",
+      "social_id": "LSGCMR72P49E345T",
+      "gender": "F",
+      "birth_date": "1982-04-09",
+      "birth_city": "Tocco Casauria",
+      "phone": "0313 3369797"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 9,
+    "fields": {
+      "user": 11,
+      "first_name": "Romano",
+      "last_name": "Genovesi",
+      "social_id": "DCCGHI85C03B656N",
+      "gender": "M",
+      "birth_date": "1962-04-05",
+      "birth_city": "Ponte Di Nava",
+      "phone": "0340 4002056"
+    }
+  },
+  {
+    "model": "members.member",
+    "pk": 10,
+    "fields": {
+      "user": 12,
+      "first_name": "Isidoro",
+      "last_name": "Calabresi",
+      "social_id": "RNGGDN48A03I610I",
+      "gender": "M",
+      "birth_date": "1981-06-25",
+      "birth_city": "Spianate",
+      "phone": "0329 0903835"
+    }
+  }
+]
