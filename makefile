@@ -63,10 +63,6 @@ serve: runserver
 runserver:
 	$(django) runserver
 	
-.PHONY: dumpdata
-dumpdata:
-	$(django) dumpdata -e contenttypes -e auth.Permission > $(DJANGO_PROJECT)/db.json
-
-.PHONY: loaddata
-loaddata:
+.PHONY: demo 
+demo:
 	$(django) loaddata authentication/demo members/demo
