@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ session.event.title }}</h1>
+
+<p>{{ session.event.subtitle }}</p>
+
+<p>{{ session.event.description }}</p>
+
+Appuntamento:
+    {{ session.start }} - {{ session.end }}
+{% endblock %}

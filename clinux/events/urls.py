@@ -5,8 +5,8 @@ from . import views
 app_name = "events"
 
 urlpatterns = [
-    # path("", views.index, name="index"),
-    path("", views.EventSessionListView.as_view(), name="events"),
-    path("list", views.EventListView.as_view(), name="event-list"),
-    path("<int:pk>", views.EventDetailView.as_view(), name="event-detail")
+    path("", views.EventListView.as_view(), name="event-list"),
+    path("<int:pk>", views.EventDetailView.as_view(), name="event-detail"),
+    path("sessions", views.EventSessionListView.as_view(), name="events"),
+    path("sessions/<int:pk>", views.EventSessionDetailView.as_view(), name="session-detail")
 ]

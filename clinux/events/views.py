@@ -17,6 +17,16 @@ class EventDetailView(DetailView):
         return context
 
 
+class EventSessionDetailView(DetailView):
+    model = models.EventSession
+    context_object_name = 'session'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["now"] = timezone.now()
+        return context
+
+
 class EventListView(ListView):
     model = models.Event
     paginate_by = 5  # if pagination is desired
