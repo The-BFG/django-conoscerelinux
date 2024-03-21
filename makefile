@@ -65,7 +65,7 @@ runserver:
 	
 .PHONY: demo 
 demo:
-	$(django) loaddata authentication/demo members/demo
+	$(django) loaddata authentication/demo members/demo events/demo
 
 .PHONY: fixtures 
 fixtures:
