@@ -22,6 +22,9 @@ class Event(models.Model):
     subtitle = models.CharField(default="", blank=True, max_length=100)
     description = models.TextField(default="", blank=True)
 
+    def __str__(self):
+        return self.title
+
     # TO_DO: timestamp
     # hours = models.CharField()
     # level = models.CharField()
