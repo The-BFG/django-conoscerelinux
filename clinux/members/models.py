@@ -5,6 +5,8 @@ from django.db import models
 from django.shortcuts import reverse
 from django.utils.translation import gettext_lazy as _
 
+from clinux import settings
+
 
 class Gender(models.TextChoices):
     MALE = "M", _("Male")
@@ -21,13 +23,12 @@ def check_italian_social_id(code: str):
 class Member(models.Model):
     """A member of the association"""
 
-    # TODO: before adding user it's better to create custom User class
-    # user = models.OneToOneField(
-    #     settings.AUTH_USER_MODEL,
-    #     on_delete=models.PROTECT,
-    #     verbose_name=_("User"),
-    #     related_name="member",
-    # )
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.PROTECT,
+        verbose_name=_("User"),
+        related_name="member",
+    )
 
     first_name = models.CharField(_("Name"), max_length=100)
     last_name = models.CharField(_("Surname"), max_length=100)
