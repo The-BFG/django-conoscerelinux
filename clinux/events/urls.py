@@ -8,4 +8,5 @@ urlpatterns = [
     # path("", views.index, name="index"),
     path("", views.EventSessionListView.as_view(), name="events"),
     path("list", views.EventListView.as_view(), name="event-list"),
+    path("<int:pk>", views.EventDetailView.as_view(), name="event-detail")
 ]

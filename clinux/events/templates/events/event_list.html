@@ -1,7 +1,7 @@
 <h1>Events</h1>
 <ul>
 {% for event in object_list %}
-    <li>{{ event.title }}</li>
+    <a href="{% url 'events:event-detail' pk=event.pk %}"><li>{{ event.title }}</li></a>
 {% empty %}
     <li>No articles yet.</li>
 {% endfor %}
