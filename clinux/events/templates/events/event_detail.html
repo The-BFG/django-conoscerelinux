@@ -10,7 +10,7 @@
 Appuntamenti:
 <ul>
 {% for session in event.sessions.all %}
-    <li>{{ session.start }} - {{ session.end }}</li>
+    <a href="{% url 'events:session-detail' pk=session.pk %}"><li>{{ session.start }} - {{ session.end }}</li></a>
 {% endfor %}
 </ul>
 {% endblock %}
