@@ -1,0 +1,67 @@
+[
+{
+  "model": "events.eventsession",
+  "pk": 1,
+  "fields": {
+    "event": 1,
+    "start": "2024-03-21T18:45:00",
+    "end": "2024-03-21T21:00:00"
+  }
+},
+{
+  "model": "events.eventsession",
+  "pk": 2,
+  "fields": {
+    "event": 2,
+    "start": "2024-03-19T21:00:00",
+    "end": "2024-03-19T23:00:00"
+  }
+},
+{
+  "model": "events.eventsession",
+  "pk": 3,
+  "fields": {
+    "event": 2,
+    "start": "2024-03-26T21:00:00",
+    "end": "2024-03-26T23:00:00"
+  }
+},
+{
+  "model": "events.eventsession",
+  "pk": 4,
+  "fields": {
+    "event": 2,
+    "start": "2024-04-02T21:00:00",
+    "end": "2024-04-02T23:00:00"
+  }
+},
+{
+  "model": "events.eventsession",
+  "pk": 5,
+  "fields": {
+    "event": 2,
+    "start": "2024-04-09T21:00:00",
+    "end": "2024-04-09T23:00:00"
+  }
+},
+{
+  "model": "events.event",
+  "pk": 1,
+  "fields": {
+    "slug": "coding-gym-0324",
+    "title": "Coding Gym Marzo 2024",
+    "subtitle": "Allena le tue abilità tecniche e comunicative in un ambiente divertente e amichevole.",
+    "description": "Coding Gym è un format internazionale di laboratori di programmazione aperti a qualsiasi linguaggio e sviluppati per il miglioramento continuo.\r\n\r\nCreato a Modena da Marco Arena nel 2016, Coding Gym è attivo anche in altre città.\r\n\r\nSegue il manifesto:\r\n\r\n    We help others practice programming, software development and communication skills by making coding laboratories open to any programming language where cooperation is valued over competition, doing and sharing are valued over teaching, and where competing solutions come with discussing and understanding tradeoffs."
+  }
+},
+{
+  "model": "events.event",
+  "pk": 2,
+  "fields": {
+    "slug": "2024-corso-sistemista-modulo-1",
+    "title": "Corso Sistemisti (modulo 1)",
+    "subtitle": "Sistemi Operativi",
+    "description": "Vuoi diventare un sistemista? Vuoi approcciarti a questo lavoro e non sai da dove partire?\r\nCon la collaborazione di Giordano \"Pigio\" Lanzi (uno dei fondatori di ConoscereLinux) vogliamo fornire un corso completo che ti porti da zero a diventare un vero sistemista.\r\n\r\nLa lezione introduttiva al corso si svolgerà il 5 Marzo per iscriversi: link\r\nSe non riuscirete a partecipare la lezione verrà trasmessa in diretta su youtube"
+  }
+}
+]
