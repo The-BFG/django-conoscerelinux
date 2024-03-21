@@ -66,3 +66,10 @@ runserver:
 .PHONY: demo 
 demo:
 	$(django) loaddata authentication/demo members/demo
+
+.PHONY: fixtures 
+fixtures:
+	$(django) dumpdata members --indent 2 > $(DJANGO_PROJECT)/members/fixtures/members/demo.json
+	$(django) dumpdata events --indent 2 > $(DJANGO_PROJECT)/events/fixtures/events/demo.json
+	$(django) dumpdata authentication --indent 2 > $(DJANGO_PROJECT)/authentication/fixtures/authentication/demo.json
+
