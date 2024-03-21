@@ -69,4 +69,4 @@ dumpdata:
 
 .PHONY: loaddata
 loaddata:
-	$(django) loaddata $(DJANGO_PROJECT)/db.json
+	$(django) loaddata authentication/demo
