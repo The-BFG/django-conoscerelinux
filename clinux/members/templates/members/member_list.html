@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if members %}
+    <ul>
+    {% for member in members %}
+      <li>{{ member }}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    No member registered
+  {% endif %}
+  
+{% endblock %}
