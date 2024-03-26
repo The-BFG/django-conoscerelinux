@@ -62,8 +62,13 @@ superuser:
 serve: runserver
 runserver:
 	$(django) runserver
-	
-.PHONY: demo 
+
+.PHONY: db
+db:
+	rm $(DJANGO_PROJECT)/db.sqlite3
+	$(django) migrate	
+
+.PHONY: demo
 demo:
 	$(django) loaddata authentication/demo members/demo events/demo
 
