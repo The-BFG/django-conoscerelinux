@@ -1,0 +1,17 @@
+{% if events %}
+
+<ul>
+  {% for event in events %}
+  <li>
+    <a href="{% url 'events:event-detail' pk=event.pk %}">
+      {{ event.title }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+{% else %}
+  
+No events yet.
+
+{% endif %}
