@@ -38,6 +38,7 @@ class EventListView(ListView):
 
 class EventSessionListView(ListView):
     model = models.EventSession
+    context_object_name = "sessions"
     paginate_by = 5  # if pagination is desired
 
     def get_context_data(self, **kwargs):
