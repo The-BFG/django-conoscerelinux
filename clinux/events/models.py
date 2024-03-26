@@ -13,9 +13,6 @@ class EventSession(models.Model):
     end = models.DateTimeField()
 
 
-# Create your models here.
-
-
 class Event(models.Model):
     slug = models.SlugField(unique=True, max_length=100)
     title = models.CharField(null=False, blank=False, max_length=100)
@@ -24,8 +21,3 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
-
-    # TO_DO: timestamp
-    # hours = models.CharField()
-    # level = models.CharField()
-    # image = models.ImageField(upload_to = user_directory_path)

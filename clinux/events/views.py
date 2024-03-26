@@ -4,12 +4,10 @@ from django.views.generic.list import ListView
 
 from . import models
 
-# Create your views here.
-
 
 class EventDetailView(DetailView):
     model = models.Event
-    context_object_name = 'event'
+    context_object_name = "event"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -19,7 +17,7 @@ class EventDetailView(DetailView):
 
 class EventSessionDetailView(DetailView):
     model = models.EventSession
-    context_object_name = 'session'
+    context_object_name = "session"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
