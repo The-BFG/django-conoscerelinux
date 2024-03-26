@@ -1,8 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <h1>Events</h1>
-<ul>
-{% for event in object_list %}
-    <a href="{% url 'events:event-detail' pk=event.pk %}"><li>{{ event.title }}</li></a>
-{% empty %}
-    <li>No articles yet.</li>
-{% endfor %}
-</ul>
+{% include 'events/partials/event_list.html' %}
+{% endblock %}

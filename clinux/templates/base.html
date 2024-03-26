@@ -1,26 +1,46 @@
 {% load static %}
+
+<!doctype html>
 <html lang="it">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
     <title>Conoscere Linux</title>
+  
     <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    
+    {% block custom-stylesheets %}{% endblock %}
   </head>
-  <body>
+  
+  <body> 
     {% block header %}
-    <header>
-      {% include 'header.html' %}
+    <header id="header">
+      {% block header-content %}
+        {% include '_header.html' %}
+      {% endblock %}
     </header>
     {% endblock %}
     
-    {% block content %}
+    {% block main %}
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
     {% endblock %}
     
     {% block footer %}
-    <footer>
+    <footer id="footer">
+      {% block footer-content %}
+        {% include "_footer.html" %}
+      {% endblock %}
     </footer>
     {% endblock %}
+    
+    {% include "_scripts.html" %}
+    {% block custom-scripts %}{% endblock %}
   </body>
 </html>
