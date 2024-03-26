@@ -4,13 +4,17 @@
 <h1>{{ event.title }}</h1>
 
 <p>{{ event.subtitle }}</p>
-
 <p>{{ event.description }}</p>
 
-Appuntamenti:
+Sessions:
 <ul>
 {% for session in event.sessions.all %}
-    <a href="{% url 'events:session-detail' pk=session.pk %}"><li>{{ session.start }} - {{ session.end }}</li></a>
+  <li>
+    <a href="{% url 'events:session-detail' pk=session.pk %}">
+      {{ session.start }} --- {{ session.end }}
+    </a>
+  </li>
 {% endfor %}
 </ul>
+
 {% endblock %}
