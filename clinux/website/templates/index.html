@@ -4,4 +4,6 @@
 <h1> Hello {{message}}! </h1>
 
 {% include "events/partials/event_list.html" %}
+
+<a href="{% url 'members:register' %}"> Diventa membro!</a>
 {% endblock %}
