@@ -1,23 +1,12 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
-
-class EventSession(models.Model):
-    event = models.ForeignKey(
-        "Event",
-        on_delete=models.CASCADE,
-        related_name="sessions",
-        null=False,
-        blank=False,
-    )
-    start = models.DateTimeField()
-    end = models.DateTimeField()
-
-
-class Event(models.Model):
-    slug = models.SlugField(unique=True, max_length=100)
-    title = models.CharField(null=False, blank=False, max_length=100)
-    subtitle = models.CharField(default="", blank=True, max_length=100)
-    description = models.TextField(default="", blank=True)
+class Payment(models.Model):
+    product_id = models.PositiveIntegerField()  # Reference to the product ID
+    amount = models.DecimalField(max_digits=8, decimal_places=2, validators=[MinValueValidator(0.01)])  # Adjust for currency
+    currency = models.CharField(max_length=3)  # Currency code (e.g., USD, EUR)
+    created_at = models.DateTimeField(auto_now_add=True)
+    stripe_payment_intent_id = models.CharField(max_length=255, blank=True)  # Optional: Store Stripe payment intent ID
 
     def __str__(self):
-        return self.title
+        return f"Payment for Product {self.product_id} on {self.created_at}"

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment for {{ event.title }}</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        var stripe = Stripe('{{ STRIPE_PUBLISHABLE_KEY }}');  // Replace with your Stripe publishable key
+        var session_id = '{{ session_id }}';
+
+        var elements = stripe.elements({
+            // ... Opzioni degli elementi Stripe (fai riferimento alla documentazione Stripe per la personalizzazione)
+        });
+
+        var paymentForm = elements.create('payment');
+        paymentForm.mount('#payment-form');
+
+        paymentForm.on('submit', function(event) {
+            event.preventDefault();
+            stripe.confirmCardPayment(session_id, {
+                payment_method: {
+                    card: paymentForm.getElement(stripe.elements.CardElement),
+                }
+            }).then((result) => {
+                if (result.error) {
+                    // Gestisci gli errori di pagamento (fai riferimento alla documentazione Stripe)
+                    console.error(result.error.message);
+                } else {
+                    // Pagamento riuscito (reindirizza o gestisci come necessario)
+                    window.location.href = '{{ success_url }}';
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Payment for {{ event.title }}</h1>
+    <p>{{ event.description }}</p>
+    <p>Price: {{ event.price }}</p>
+
+    <label>Metodi di pagamento
+        <div id="payment-form"></div>
+    </label>
+
+</body>
+</html>
